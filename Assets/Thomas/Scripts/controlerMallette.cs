@@ -37,6 +37,10 @@ public class controlerMallette : MonoBehaviour
             etiquetteArgent.SetText($"{argent}");
             Destroy(autreObjet.gameObject);
         }
+        if (autreObjet.gameObject.CompareTag("basDeMap"))
+        {
+            gameObject.transform.position = new Vector3(-3.667798f, 0.3123897f, -0.366f);
+        }
 
     }
 }
