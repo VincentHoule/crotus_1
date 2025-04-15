@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ControlerEtagere : MonoBehaviour
@@ -20,6 +21,7 @@ public class ControlerEtagere : MonoBehaviour
         if (autreObjet.gameObject.CompareTag("Livre"))
         {
             if (!deplacer) {
+                Debug.Log("3");
                 deplacer = true;
                 controleurAnimation.SetTrigger("livreEnleve");
             }
