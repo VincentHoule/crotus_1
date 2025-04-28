@@ -7,11 +7,12 @@ TagManager:
   - Lancable
   - Gem
   - Livre
+  - Joueur
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Detecteur
   - Water
   - UI
   - 

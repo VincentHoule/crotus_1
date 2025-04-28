@@ -1,18 +1,22 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// État neutre ou le squelette suit son chemin
+/// </summary>
 public class EtatGarde : EtatChevalier
 {
 
     public void OnCommencer(Chevalier chevalier)
     {
+        chevalier.ConeDetection.enabled = true;
+        chevalier.Agent.enabled = true;
         chevalier.Destination = null;
-        chevalier.GetComponent<NavMeshAgent>().enabled = true;
     }
 
     public EtatChevalier OnExecuter(Chevalier chevalier)
     {
-        Vector3 position = chevalier.GetComponent<Rigidbody>().position;
+        Vector3 position = chevalier.Rb.position;
 
 
         if (chevalier.Destination == null)
@@ -20,9 +24,8 @@ public class EtatGarde : EtatChevalier
             chevalier.DeplacerVers();
         }
 
-        else if (Vector3.Distance((Vector3)chevalier.Destination, position) < 1)
+        else if (Vector3.Distance((Vector3)chevalier.Destination, position) < 1.2f)
         {
-            Debug.Log("lo");
             chevalier.DeplacerVers();
         }
         return this;
@@ -30,7 +33,7 @@ public class EtatGarde : EtatChevalier
     }
 
     public void OnSortie(Chevalier chevalier)
-        {
-            // rien
-        }
+    {
+        // rien
     }
+}
