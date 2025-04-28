@@ -9,6 +9,7 @@ TagManager:
   - Livre
   - Joueur
   - basDeMap
+  - Feu
   layers:
   - Default
   - TransparentFX

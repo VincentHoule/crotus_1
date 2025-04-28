@@ -29,6 +29,7 @@ namespace ConeCastDemo
 
         [SerializeField]
         private UnityEvent toucherJoueur;
+
         public void Update()
         {
             if (blockingCast)
