@@ -8,6 +8,7 @@ TagManager:
   - Gem
   - Livre
   - Joueur
+  - basDeMap
   layers:
   - Default
   - TransparentFX
