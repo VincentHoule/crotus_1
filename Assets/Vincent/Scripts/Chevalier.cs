@@ -4,7 +4,7 @@ using ConeCastDemo;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Playables;
-using Random = UnityEngine.Random;
+
 
 /// <summary>
 /// Gère les gardes squelettes
@@ -19,11 +19,6 @@ public class Chevalier : MonoBehaviour
     // Temps que le squelette est étourdi
     [SerializeField]
     private float tempsEtourdi;
-
-    [SerializeField]
-    private AudioClip[] listeSons;
-
-    private AudioSource sonPas;
 
     // Accèsseur de la destination du squelette
     public Vector3? Destination { get; set; }
@@ -75,7 +70,6 @@ public class Chevalier : MonoBehaviour
         coneDetection = GetComponentInChildren<ConeCastModifier>();
         ConeDetection = coneDetection;
         Destination = null;
-        sonPas = GetComponent<AudioSource>();
         Etourdi = false;
         etat = new EtatGarde();
         
@@ -93,15 +87,6 @@ public class Chevalier : MonoBehaviour
         if (numChemin == chemins.Length)
             numChemin = 0;
 
-    }
-
-    private void JouerSon()
-    {
-        if (!sonPas.isPlaying && !(bool)Etourdi)
-        {
-            sonPas.resource = listeSons[Random.Range(0, listeSons.Length)];
-            sonPas.Play();
-        }
     }
 
     /// <summary>
@@ -140,7 +125,6 @@ public class Chevalier : MonoBehaviour
 
     void Update()
     {
-        JouerSon();
         // Machine à état
         if (etat != etatPrecedant)
         {
