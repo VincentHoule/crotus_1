@@ -10,6 +10,27 @@ TagManager:
   - Joueur
   - basDeMap
   - Feu
+  - QDSUIToggleButton
+  - QDSUIIcon
+  - QDSUITextSecondaryColor
+  - QDSUIPrimaryButton
+  - QDSUISharedThemeColor
+  - QDSUIAccentColor
+  - QDSUISecondaryButton
+  - QDSUIDestructiveButton
+  - QDSUIBorderlessButton
+  - QDSUIToggleBorderlessButton
+  - QDSUITooltip
+  - QDSUIToggleSwitch
+  - PassThroughButton
+  - PassThrough
+  - Locomotion
+  - LocoButton
+  - LocoText
+  - QDSUITextInputField
+  - SamplesInfoPanel
+  - QDSUIToggleCheckboxRadio
+  - QDSUISection
   layers:
   - Default
   - TransparentFX
@@ -17,7 +38,7 @@ TagManager:
   - Detecteur
   - Water
   - UI
-  - 
+  - PasTp
   - 
   - 
   - 
