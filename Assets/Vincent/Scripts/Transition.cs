@@ -3,54 +3,41 @@ using UnityEngine.UI;
 using System.Collections;
 
 
-/*
- * 
- *  autheur : M.ChatGPT
- */
+
 public class Transition : MonoBehaviour
 {
-    public Image fadeImage;       // Assign your black Image here
-    public float fadeDuration = 1.0f; // How fast it fades
+    [SerializeField]
+    private Image image;
 
-    private void Start()
+
+    public IEnumerator FonduAuNoir(float tempsTransition)
     {
-        // Optional: start fully transparent
-        if (fadeImage != null)
+        float tempsEcouler = 0f;
+        Color couleurTemp = Color.black;
+        while(tempsEcouler < tempsTransition)
         {
-            Color color = fadeImage.color;
-            color.a = 0f;
-            fadeImage.color = color;
+            tempsEcouler += Time.deltaTime;
+            float valeurCouleur = tempsEcouler / tempsTransition;
+            couleurTemp.a = valeurCouleur;
+            image.color = couleurTemp;
+
+            yield return null;
         }
+ 
     }
-
-    public void FadeIn()  // Fade to black
+    public IEnumerator FonduAuClair(float tempsTransition)
     {
-        StartCoroutine(Fade(1));
-    }
-
-    public void FadeOut() // Fade back to transparent
-    {
-        StartCoroutine(Fade(0));
-    }
-
-    private IEnumerator Fade(float targetAlpha)
-    {
-        float startAlpha = fadeImage.color.a;
-        float timer = 0f;
-
-        while (timer < fadeDuration)
+        float tempsEcouler = 0f;
+        Color couleurTemp = Color.black;
+        while (tempsEcouler < tempsTransition)
         {
-            timer += Time.deltaTime;
-            float alpha = Mathf.Lerp(startAlpha, targetAlpha, timer / fadeDuration);
-            Color color = fadeImage.color;
-            color.a = alpha;
-            fadeImage.color = color;
+            tempsEcouler += Time.deltaTime;
+            float valeurCouleur = (tempsTransition - tempsEcouler) / tempsTransition;
+            couleurTemp.a = valeurCouleur;
+            image.color = couleurTemp;
+
             yield return null;
         }
 
-        // Snap exactly to target alpha
-        Color finalColor = fadeImage.color;
-        finalColor.a = targetAlpha;
-        fadeImage.color = finalColor;
     }
 }

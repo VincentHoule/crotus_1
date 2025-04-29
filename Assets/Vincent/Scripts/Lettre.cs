@@ -1,5 +1,8 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
+// Lettre qui permet de commencer le jeu
 public class Lettre : MonoBehaviour
 {
     [SerializeField]
@@ -7,19 +10,30 @@ public class Lettre : MonoBehaviour
 
     [SerializeField]
     Transform debutMap;
-    void Start()
-    {
-        
-    }
 
+    [SerializeField]
+    private Transition transition;
 
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Feu"))
         {
-            joueur.position = debutMap.position;
+            StartCoroutine(DebutJeu());
 
         }
     }
+
+    private IEnumerator DebutJeu()
+    {
+        float tempsTransition = 3.0f;
+
+        StartCoroutine(transition.FonduAuNoir(tempsTransition));
+        yield return new WaitForSeconds(tempsTransition);
+
+        joueur.position = debutMap.position;
+        StartCoroutine(transition.FonduAuClair(tempsTransition));
+    }
+
+
 
 }
