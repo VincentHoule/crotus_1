@@ -5,15 +5,22 @@ using UnityEngine.Events;
 // Lettre qui permet de commencer le jeu
 public class Lettre : MonoBehaviour
 {
+    // Position du joueur
     [SerializeField]
     Transform joueur;
 
+    // Endroit à envoyer le joueur pour commencer le jeu
     [SerializeField]
     Transform debutMap;
 
+    // Gestionnaire de transition
     [SerializeField]
     private Transition transition;
 
+    /// <summary>
+    /// Détection de la lettre dans le feu
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Feu"))
@@ -23,6 +30,10 @@ public class Lettre : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Débute le jeu avec transition
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator DebutJeu()
     {
         float tempsTransition = 3.0f;
