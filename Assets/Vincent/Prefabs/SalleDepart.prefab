@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2230699611210876329}
-  - component: {fileID: 3755932502676662457}
   m_Layer: 0
   m_Name: SalleDepart
   m_TagString: Untagged
@@ -51,38 +50,6 @@ Transform:
   - {fileID: 2593422216601721131}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3755932502676662457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4291821550930405752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.06666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: f2e8d09c85d139f41928cd150be31a34, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1 &7264261369923492922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,7 +1097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8334536144052358363, guid: d5a25f68f020b464e982b1c39126151b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.81
       objectReference: {fileID: 0}
     - target: {fileID: 8334536144052358363, guid: d5a25f68f020b464e982b1c39126151b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1198,6 +1165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joueur: {fileID: 0}
   debutMap: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!1001 &4873365917855140156
 PrefabInstance:
   m_ObjectHideFlags: 0

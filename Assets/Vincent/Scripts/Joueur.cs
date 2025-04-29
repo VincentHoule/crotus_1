@@ -21,7 +21,7 @@ public class Joueur : MonoBehaviour
         float tempsTransition = 3.0f;
 
         StartCoroutine(transition.FonduAuNoir(tempsTransition));
-        yield return new WaitForSeconds(tempsTransition);
+        yield return new WaitForSeconds(tempsTransition + 1f);
         transform.position = endroitMort.position;
         StartCoroutine(transition.FonduAuClair(tempsTransition));
     }

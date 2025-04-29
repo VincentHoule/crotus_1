@@ -28,7 +28,7 @@ public class Lettre : MonoBehaviour
         float tempsTransition = 3.0f;
 
         StartCoroutine(transition.FonduAuNoir(tempsTransition));
-        yield return new WaitForSeconds(tempsTransition);
+        yield return new WaitForSeconds(tempsTransition + 1f);
 
         joueur.position = debutMap.position;
         StartCoroutine(transition.FonduAuClair(tempsTransition));

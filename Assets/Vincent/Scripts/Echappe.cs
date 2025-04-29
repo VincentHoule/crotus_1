@@ -20,7 +20,7 @@ public class Echappe : MonoBehaviour
         float tempsTransition = 3.0f;
 
         StartCoroutine(transition.FonduAuNoir(tempsTransition));
-        yield return new WaitForSeconds(tempsTransition);
+        yield return new WaitForSeconds(tempsTransition + 1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
