@@ -17,7 +17,7 @@ public class controlerMallette : MonoBehaviour
     /// <summary>
     /// variable interne gardant la valeur de l'argent en mémoire
     /// </summary>
-    private int argent = 0;
+    public int argent = 0;
 
     /// <summary>
     /// variable interne du controlrGemme de la derniere gemme mis dans la mallette
