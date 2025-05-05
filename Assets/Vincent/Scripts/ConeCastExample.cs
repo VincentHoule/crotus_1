@@ -30,6 +30,11 @@ namespace ConeCastDemo
         [SerializeField]
         private UnityEvent toucherJoueur;
 
+        private bool perdu;
+        private void Start()
+        {
+             perdu = false;
+        }
         public void Update()
         {
             if (blockingCast)
@@ -52,9 +57,11 @@ namespace ConeCastDemo
                 if (isHit)
                 {
                     // Partie modifier
-                    if (hit.collider.gameObject.CompareTag("Joueur"))
+                    if (hit.collider.gameObject.CompareTag("Joueur") && !perdu)
                     {
+                        perdu = true;
                         toucherJoueur.Invoke();
+                        
 
                     }
                 }

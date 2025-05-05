@@ -20986,7 +20986,6 @@ GameObject:
   - component: {fileID: 2735629495958125219}
   - component: {fileID: 8904408638118491767}
   - component: {fileID: 241222304927953794}
-  - component: {fileID: 7520363064177240686}
   m_Layer: 0
   m_Name: '[BuildingBlock] Camera Rig'
   m_TagString: Untagged
@@ -21010,7 +21009,7 @@ Transform:
   - {fileID: 8597435846015646983}
   - {fileID: 918206909705103641}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &5875461671524860157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21247,19 +21246,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7520363064177240686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6302104689396379790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126daf703560d5443b1cf2e4e876f226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endroitMort: {fileID: 0}
 --- !u!1 &6310833765433908932
 GameObject:
   m_ObjectHideFlags: 0
@@ -29756,9 +29742,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8597435846015646983}
+  - component: {fileID: 7587723420442439435}
+  - component: {fileID: 7597481759470750390}
   m_Layer: 0
   m_Name: TrackingSpace
-  m_TagString: Untagged
+  m_TagString: Joueur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29786,6 +29774,41 @@ Transform:
   - {fileID: 1763987811682883958}
   m_Father: {fileID: 4405438990192290265}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7587723420442439435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840469794464114948}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.4750296, z: 1}
+  m_Center: {x: 0, y: 0.87335616, z: 0}
+--- !u!114 &7597481759470750390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840469794464114948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 126daf703560d5443b1cf2e4e876f226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endroitMort: {fileID: 0}
+  transition: {fileID: 0}
 --- !u!1 &8848870955319750738
 GameObject:
   m_ObjectHideFlags: 0

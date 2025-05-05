@@ -168,6 +168,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3859122894128783454}
     m_Modifications:
+    - target: {fileID: 864938946576988065, guid: 28e1bf7c0a3d59d40a953ea3eb126211, type: 3}
+      propertyPath: farClipDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 893964034356826408, guid: 28e1bf7c0a3d59d40a953ea3eb126211, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 66.567345
@@ -231,6 +235,18 @@ PrefabInstance:
     - target: {fileID: 2508792032906305863, guid: 28e1bf7c0a3d59d40a953ea3eb126211, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -43.623814
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055224374710495136, guid: 28e1bf7c0a3d59d40a953ea3eb126211, type: 3}
+      propertyPath: m_Range
+      value: 2.4181008
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055224374710495136, guid: 28e1bf7c0a3d59d40a953ea3eb126211, type: 3}
+      propertyPath: m_Intensity
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055224374710495136, guid: 28e1bf7c0a3d59d40a953ea3eb126211, type: 3}
+      propertyPath: m_SpotAngle
+      value: 51.624153
       objectReference: {fileID: 0}
     - target: {fileID: 3910834094695688710, guid: 28e1bf7c0a3d59d40a953ea3eb126211, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

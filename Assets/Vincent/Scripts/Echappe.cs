@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 /// <summary>
 /// Gère lancement de la nouvelle partie
 /// </summary>
@@ -11,15 +12,24 @@ public class Echappe : MonoBehaviour
     [SerializeField]
     private Transition transition;
 
+    private bool recommencer;
+
+
+    private void Start()
+    {
+        recommencer = false;
+    }
     /// <summary>
     /// Détertion du relancement de jeu
     /// </summary>
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Joueur"))
+        if (!recommencer)
         {
+            recommencer = true;
             StartCoroutine(RecommencerJeu());
+
         }
     }
 
