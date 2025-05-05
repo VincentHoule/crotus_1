@@ -9054,11 +9054,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4705713627168586025, guid: 8ce9fe29b1e7da845bb1cc6bb72efff5, type: 3}
       propertyPath: m_Size.y
-      value: 1.6904963
+      value: 11.543817
       objectReference: {fileID: 0}
     - target: {fileID: 4705713627168586025, guid: 8ce9fe29b1e7da845bb1cc6bb72efff5, type: 3}
       propertyPath: m_Center.y
-      value: 0.34524807
+      value: 5.271907
       objectReference: {fileID: 0}
     - target: {fileID: 4705713627168586025, guid: 8ce9fe29b1e7da845bb1cc6bb72efff5, type: 3}
       propertyPath: m_IsTrigger
